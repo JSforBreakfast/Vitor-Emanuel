@@ -1,7 +1,11 @@
 body{
-    background: #0089FF;
+    background: #FBFFFF;
     margin: auto;
-    max-width: 45em;/*em or %. test later*/
+    max-width: 45em;
+}
+
+h1 {
+    color: #0089FF;    
 }
 
 header{
@@ -10,3 +14,15 @@ header{
     background: #FBFFFF;
     border-color: #2066A2;
 }
+
+header input{
+    color:#707070;
+    text-indent: 1.5rem;
+    padding:0 60px 0 0;
+    background: #FBFFFF;
+    border-radius: 5px 25px 25px 5px;
+    border:0;
+    height: 3rem;
+    width: 80%;
+}
+
