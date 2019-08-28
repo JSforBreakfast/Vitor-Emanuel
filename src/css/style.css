@@ -2,10 +2,12 @@ body{
     background: #FBFFFF;
     margin: auto;
     max-width: 45em;
+    font-family: Montserrat;
 }
 
 h1 {
-    color: #0089FF;    
+    color: #0089FF; 
+    padding: 0 15px 0 15px;
 }
 
 header{
@@ -22,15 +24,18 @@ header input{
     background: #FBFFFF;
     border-radius: 5px 25px 25px 5px;
     border:0;
-    height: 3rem;
-    width: 80%;
+    height: 2rem;
+    width: 90%;
 }
 
 header button{
     border-radius: 5px;
     background: #0089FF;
     border:0;
-    height:3rem;
-    width:6rem;
+    height:2rem;
+    width:5rem;
     cursor: pointer;
+    margin: -5rem;
+    color:#FBFFFF
 }
+
