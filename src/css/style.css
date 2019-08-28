@@ -1,0 +1,12 @@
+body{
+    background: #0089FF;
+    margin: auto;
+    max-width: 45em;/*em or %. test later*/
+}
+
+header{
+    padding: 1rem;
+    box-shadow: 0 2px 4px #0089FF;
+    background: #FBFFFF;
+    border-color: #2066A2;
+}
