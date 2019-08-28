@@ -2,7 +2,7 @@ body{
     background: #FBFFFF;
     margin: auto;
     max-width: 45em;
-    font-family: Montserrat;
+    font-family:Montserrat, sans-serif, monospace;
 }
 
 h1 {
