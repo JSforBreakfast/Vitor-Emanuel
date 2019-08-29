@@ -1,7 +1,10 @@
 (function (){
 
-//Array being used to store elements typed in by the user
-const data = {items: []};
+//Checking for data in the local storage, and, if there is any,
+let data = localStorage.getItem("todoList") /*if there is data*/ ? JSON.parse(localStorage.getItem("todoList"));
+{items: []};//Array being used to store elements typed in by the user
+
+
 
 //Function being used to save the data 
 function updateLocalStorage(){
