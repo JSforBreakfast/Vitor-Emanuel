@@ -5,7 +5,7 @@ body{
     font-family:Montserrat, sans-serif, monospace;
 }
 
-h1 {
+h1{
     color: #0089FF; 
     padding: 0 15px 0 15px;
 }
@@ -25,7 +25,7 @@ header input{
     border-radius: 5px 25px 25px 5px;
     border:0;
     height: 2rem;
-    width: 80%;
+    width: 99%;
 }
 
 header button{
@@ -37,5 +37,27 @@ header button{
     cursor: pointer;
     margin: -5rem;
     color:#FBFFFF
+}
+
+.buttons{
+    float: right;
+    padding-right: 2rem;
+}
+
+.button button{
+    cursor: pointer;
+    border: 15rem solid transparent;
+    vertical-align: middle;
+    width: 2rem;
+    height: 2rem;
+    transition: fill .2 ease; 
+}
+
+.button button.complete{
+    border: 0.1rem solid #46CBA2;
+}
+
+.buttons button.{
+    background: #46CBA2; 
 }
 
