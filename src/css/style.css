@@ -7,12 +7,12 @@ body{
 
 h1{
     color: #0089FF; 
-    padding: 0 15px 0 15px;
+    padding: 15px 15px 0 15px;
 }
 
 header{
     padding: 1rem;
-    box-shadow: 0 2px 4px #0089FF;
+    box-shadow: 0 2px 2px #0089FF;
     background: #FBFFFF;
     border-color: #2066A2;
 }
@@ -24,7 +24,7 @@ header input{
     background: #FBFFFF;
     border-radius: 5px 25px 25px 5px;
     border:0;
-    height: 2rem;
+    height: 3rem;
     width: 99%;
 }
 
@@ -32,32 +32,40 @@ header button{
     border-radius: 5px;
     background: #0089FF;
     border:0;
-    height:2rem;
-    width:5rem;
+    height:3rem;
+    width:8rem;
     cursor: pointer;
-    margin: -5rem;
+    margin: -8rem;
     color:#FBFFFF
 }
 
 .buttons{
     float: right;
-    padding-right: 2rem;
+    padding-right: 1rem;
 }
 
-.button button{
+.buttons button{
     cursor: pointer;
     border: 15rem solid transparent;
     vertical-align: middle;
-    width: 2rem;
+    width: 5rem;
     height: 2rem;
     transition: fill .2 ease; 
 }
 
-.button button.complete{
-    border: 0.1rem solid #46CBA2;
+.buttons button.complete{
+    border: 0.1rem solid #FBFFFF;
 }
 
-.buttons button.{
-    background: #46CBA2; 
+.buttons button.complete: hover{
+    background: #46CBA2;
+}
+
+.buttons button.remove{
+    border: 0.1rem solid #FBFFFF; 
+    }
+    
+.buttons button.remove: hover{
+    background: #F5B542; 
 }
 
