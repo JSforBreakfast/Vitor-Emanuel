@@ -1,8 +1,9 @@
 (function (){
 
 //Array being used to store elements typed in by the user
-const data = {items: [];}
+const data = {items: []};
 
+//Function being used to save the data 
 function updateLocalStorage(){
 localStorage.setItem("todoList", JSON.stringify(data));
 }
