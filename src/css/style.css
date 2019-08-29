@@ -35,26 +35,33 @@ header button{
     height:3rem;
     width:8rem;
     cursor: pointer;
-    margin: -8.5rem;
+    margin: -8.3rem;
     color:#FBFFFF
+}
+
+li{
+padding: 15px 25px 15px 25px;    
+    color: #0089FF;; 
 }
 
 .buttons{
     float: right;
-    padding-right: -5rem;
+    padding-right: 1rem;
 }
 
 .buttons button{
     cursor: pointer;
     border: 15rem solid transparent;
     vertical-align: middle;
-    width: 5rem;
+    width: 4.5rem;
     height: 2rem;
     transition: fill .2 ease; 
 }
 
 .buttons button.complete{
     border: 0.1rem solid #FBFFFF;
+    color: #707070;
+    background: #46CBA2;
 }
 
 .buttons button.complete: hover{
@@ -62,21 +69,42 @@ header button{
 }
 
 .buttons button.remove{
-    border: 0.1rem solid #FBFFFF; 
+    border: 0.1rem solid #FBFFFF;
+    color: #707070;
+    background: #F5B542
     }
     
 .buttons button.remove: hover{
-    background: #F5B542; 
+    background: #F5B542;
 }
 
-.todo li{
+#todo li{
     color: #0089FF;
     background: #FBFFFF;
     border-radius: 0.5rem;
     box-shadow: 0 1px 2px #2066A2;
     margin-bottom: 1rem;
     padding: 1.5rem;
-    word-wrap: break-word;
+    /*word-wrap:;*/
 }
 
+#completed li {
+    background: #FBFFFF;
+    opacity: 0.4
+}
+
+#completed:after, #todo:after{
+    text-align:center;
+    color: #2066A2;
+    display: block;
+}
+
+#todo: empty: after{
+    content: "Nada a fazer";
+   
+}
+
+#completed: empty: after{
+    content: "Realize ou adicione novas tarefas";
+}
 
