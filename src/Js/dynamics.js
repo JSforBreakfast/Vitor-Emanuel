@@ -28,25 +28,45 @@ item.addEventListener("keyDown", function(e){
      addItem();
   }
 });    
-    
+
+if(data.itmes){
+    for(let i = 0; i = data.items.length; i++){
+        attachToDom(data.items[i]); 
+    }
+}    
+
 function addItem(){
     //function being used to add items written by the user //test on chrome dev tools
     if(!item.value) return;
     //console.log("entered information");
     let currentItem = {
-        id: math.floor(Math.random()*100),
+        id: Math.floor(Math.random()*100),
         value: item.value,
-        completed: false
+        completed: false,
     }
     data.items.push(currentItem);
-    attachToDom
+    attachToDom(currentItem);
     item.value = "";
     //console.log(data.items);
     updateLocalStorage();
 }
-   
-    
-    
-    
+//function being used to attach the elements to the DOM 
+function attachToDom(data){ 
+    //if the data completed is true, add it to the todo list, else, add it to the todo list
+    let placeholder = data.completed ? completed : todo;
+    //save data into the placeholder variable without erasing what already exists in there
+    placeholder.innerHTML += render(data);
+}  
+//function being used to return the HTML string field with data inputs    
+function render(data){
+    return(
+         `<li>${data.value}
+                <div class="buttons">
+                    <button class="remove">EXCLUIR</button>
+                    <button class="complete">ATIVAR</button>
+                </div>
+            </li> `
+    )
+}   
     
 })();
