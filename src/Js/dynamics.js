@@ -28,12 +28,32 @@ item.addEventListener("keyDown", function(e){
      addItem();
   }
 });    
-
-if(data.itmes){
+//loop being used to fill the items array with the data typed by the user and attach it to the dom
+if(data.items){
     for(let i = 0; i = data.items.length; i++){
         attachToDom(data.items[i]); 
     }
-}    
+    todo.addEventListener("click", buttonClick);
+    completed.addEventListener("click", buttonClick)
+}   
+    
+function buttonClick(event){
+    let target = eventTarget;
+    if(target.tagName !== "BUTTON") return;
+    //console.log("clicked on button")//test chrome dev tools
+    let li = target.parentNode.parentNode;
+    //using parseInt to find the dataId element because the attribute would be a string otherwise
+    let dataId = parseInt(li.getAttribute("dataId"));
+    //console.log(li.getAttribute("dataId"));
+    if(target.className == "remove"){
+        console.log("removing item");
+    }
+    if(target.className == "complete"){
+        console.log("completing item");
+    }
+    
+    li.parentNode.removeChild(li);
+}
 
 function addItem(){
     //function being used to add items written by the user //test on chrome dev tools
@@ -50,7 +70,7 @@ function addItem(){
     //console.log(data.items);
     updateLocalStorage();
 }
-//function being used to attach the elements to the DOM 
+//function being used to attach the items/elements to the DOM 
 function attachToDom(data){ 
     //if the data completed is true, add it to the todo list, else, add it to the todo list
     let placeholder = data.completed ? completed : todo;
@@ -60,7 +80,7 @@ function attachToDom(data){
 //function being used to return the HTML string field with data inputs    
 function render(data){
     return(
-         `<li>${data.value}
+         `<li dataId = ${data.id}> ${data.value}
                 <div class="buttons">
                     <button class="remove">EXCLUIR</button>
                     <button class="complete">ATIVAR</button>
