@@ -99,12 +99,11 @@ padding: 15px 25px 15px 25px;
     display: block;
 }
 
-#todo: empty: after{
-    content: "Nada a fazer";
-   
+/*#todo: empty: after{
+    content: "Nada a fazer";   
 }
 
 #completed: empty: after{
     content: "Realize ou adicione novas tarefas";
-}
+}*/
 
