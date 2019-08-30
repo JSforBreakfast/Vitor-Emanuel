@@ -45,16 +45,32 @@ function buttonClick(event){
     //using parseInt to find the dataId element because the attribute would be a string otherwise
     let dataId = parseInt(li.getAttribute("dataId"));
     //console.log(li.getAttribute("dataId"));
+    
+    //for the program to recognize which button is actually being clicked to either remove the items or complete them
     if(target.className == "remove"){
-        console.log("removing item");
+        //console.log("removing item");
+        removeItem(dataId);
     }
     if(target.className == "complete"){
-        console.log("completing item");
+        //console.log("completing item");
+        completeItem(dataId);
     }
-    
+    //the purpose of this function is to update the items at the local storage as well
+    updateLocalStorage();
+    //to remove the items that were typed by the user with the buttons
     li.parentNode.removeChild(li);
 }
-
+ //function being used to filter and remove elements within the data array   
+ function removeItem(search){
+     data.items = data.items.filter(function(el){
+          return el.id !== search;             
+    });
+}   
+    
+function completeItem(search){
+                 
+    });
+}   
 function addItem(){
     //function being used to add items written by the user //test on chrome dev tools
     if(!item.value) return;
@@ -83,7 +99,7 @@ function render(data){
          `<li dataId = ${data.id}> ${data.value}
                 <div class="buttons">
                     <button class="remove">EXCLUIR</button>
-                    <button class="complete">ATIVAR</button>
+                    <button class="complete">CONCLUIDA</button>
                 </div>
             </li> `
     )
