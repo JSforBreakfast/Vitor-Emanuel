@@ -53,9 +53,9 @@ function buttonClick(event){
     }
     if(target.className == "complete"){
         //console.log("completing item");
-        completeItem(dataId);
+        updateItem(dataId);
     }
-    //the purpose of this function is to update the items at the local storage as well
+    //this function is being used to update the items at the local storage as well
     updateLocalStorage();
     //to remove the items that were typed by the user with the buttons
     li.parentNode.removeChild(li);
@@ -66,10 +66,18 @@ function buttonClick(event){
           return el.id !== search;             
     });
 }   
-    
-function completeItem(search){
-                 
-    });
+ //function being used to loop through data accumulated in the array data.items, and to check if the id of the current element being looped corresponds to the id of teh element being searched through comparing indexes
+function updateItem(search){
+     for (let j = 0; j = data.items.length; j++){
+         if(data.items[j].id == search){
+             data.items[j].completed =! data.items[j].completed;
+             
+             attachToDom(data.items[j]);
+             
+             break;
+         }
+     }            
+  
 }   
 function addItem(){
     //function being used to add items written by the user //test on chrome dev tools
