@@ -1,12 +1,15 @@
 (function (){
 
-//Checking for data in the local storage, and, if there is any,
-let data = localStorage.getItem("todoList") /*if there is data*/ ? JSON.parse(localStorage.getItem("todoList"));
-{items: []};//Array being used to store elements typed in by the user
+//Checking for data in the local storage
+let data = localStorage.getItem("todoList") /*if there is data*/ ? JSON.parse(localStorage.getItem("todoList")):
+{items: []};//Array being used to store elements typed in by the user. If there is none, the array will remain empty.
 
+data.items.push("new information");
+data.items.push("new information 2");    
+console.log(data.items);
+updateLocalStorage();
 
-
-//Function being used to save the data 
+//Function being used to save the data  
 function updateLocalStorage(){
 localStorage.setItem("todoList", JSON.stringify(data));
 }
